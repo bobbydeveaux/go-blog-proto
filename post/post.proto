@@ -1,0 +1,24 @@
+
+syntax = "proto3";
+
+
+
+package post;
+
+// The greeting service definition.
+service Greeter {
+  // Sends a greeting
+  rpc GetPosts(PostRequest) returns (PostReply) {}
+}
+
+// The request message containing the user's name.
+message PostRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings
+message PostReply {
+  	int32 postid = 1;
+  	string message = 2;
+  
+}
