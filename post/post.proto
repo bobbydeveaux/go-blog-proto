@@ -19,6 +19,13 @@ message PostRequest {
 // The response message containing the greetings
 message PostReply {
   	int32 postid = 1;
-  	string message = 2;
+  	
+  	message Post {
+        int32 PostID = 1;
+        string Content = 2;
+        string Published = 3;
+    }
+
+    repeated Post message = 2;
   
 }
